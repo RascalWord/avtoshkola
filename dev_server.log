@@ -1,0 +1,19 @@
+
+> crm-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1823ms
+ ○ Compiling / ...
+ ✓ Compiled / in 16.6s (2710 modules)
+ GET / 200 in 17852ms
+ ✓ Compiled in 1428ms (1335 modules)
+ ○ Compiling /students ...
+ ✓ Compiled /students in 10.2s (2965 modules)
+ ○ Compiling /groups ...
+ ✓ Compiled /finances in 2.1s (3073 modules)
+ ✓ Compiled in 1408ms (3075 modules)
+ ✓ Compiled in 957ms (3075 modules)
