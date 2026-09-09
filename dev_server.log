@@ -1,0 +1,558 @@
+
+> crm-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1823ms
+ ○ Compiling / ...
+ ✓ Compiled / in 16.6s (2710 modules)
+ GET / 200 in 17852ms
+ ✓ Compiled in 1428ms (1335 modules)
+ ○ Compiling /students ...
+ ✓ Compiled /students in 10.2s (2965 modules)
+ ○ Compiling /groups ...
+ ✓ Compiled /finances in 2.1s (3073 modules)
+ ✓ Compiled in 1408ms (3075 modules)
+ ✓ Compiled in 957ms (3075 modules)
+ ✓ Compiled in 16s (3075 modules)
+ ✓ Compiled in 1041ms (3075 modules)
+ ✓ Compiled in 853ms (3075 modules)
+ ✓ Compiled in 1711ms (3075 modules)
+ ✓ Compiled in 671ms (3075 modules)
+ ✓ Compiled in 514ms (1534 modules)
+ ✓ Compiled in 567ms (1534 modules)
+ ✓ Compiled in 1252ms (3061 modules)
+ GET / 200 in 278ms
+ ○ Compiling /finances ...
+ ✓ Compiled /finances in 1913ms (1548 modules)
+ ✓ Compiled (1553 modules)
+ ⨯ TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/app/crm-app/.next/server/webpack-runtime.js:33:42)
+digest: "1753904115"
+TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/app/crm-app/.next/server/webpack-runtime.js:33:42)
+    at require (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:40:20064)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108376
+    at ea (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108583)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:110813
+    at Object._fromJSON (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:111370)
+    at JSON.parse (<anonymous>)
+    at ec (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:109078)
+    at eo (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108123)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115291
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115308
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115341
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115358
+    at t (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115581)
+ ⨯ TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/app/crm-app/.next/server/webpack-runtime.js:33:42)
+    at require (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:40:20064)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108376
+    at ea (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108583)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:110813
+    at Object._fromJSON (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:111370)
+    at JSON.parse (<anonymous>)
+    at ec (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:109078)
+    at eo (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108123)
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115291
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115308
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115341
+    at /app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115358
+    at t (/app/crm-app/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115581) {
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 3.1s (3287 modules)
+ GET / 500 in 3407ms
+ GET / 200 in 602ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/app/crm-app/.next/server/vendor-chunks/@reduxjs.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/@reduxjs' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/@reduxjs.js', but to 'Error: Can't resolve './vendor-chunks/@reduxjs' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/@reduxjs (expected /app/crm-app/.next/server/vendor-chunks/@reduxjs.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/page.js
+<w>  at file /app/crm-app/.next/server/app/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/d3-path' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/d3-path.js', but to 'Error: Can't resolve './vendor-chunks/d3-path' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/d3-path (expected /app/crm-app/.next/server/vendor-chunks/d3-path.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/page.js
+<w>  at file /app/crm-app/.next/server/app/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+ GET / 200 in 56ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1778ms (3290 modules)
+ GET /_next/static/css/app/layout.css?v=1788926845675 404 in 2038ms
+ GET /_next/static/chunks/main-app.js?v=1788926845675 404 in 2046ms
+ GET /_next/static/chunks/app/page.js 404 in 2032ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 2046ms
+ GET /_next/static/chunks/app/layout.js 404 in 2029ms
+ GET /students 200 in 200ms
+ GET /_next/static/css/app/layout.css?v=1788926850994 404 in 73ms
+ GET /_next/static/chunks/main-app.js?v=1788926850994 404 in 103ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 101ms
+ GET /_next/static/chunks/app/students/page.js 404 in 101ms
+ GET /_next/static/chunks/app/layout.js 404 in 100ms
+ GET /students 200 in 32ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/app/crm-app/.next/server/vendor-chunks/date-fns.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/date-fns' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/date-fns.js', but to 'Error: Can't resolve './vendor-chunks/date-fns' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/date-fns (expected /app/crm-app/.next/server/vendor-chunks/date-fns.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/finances/page.js
+<w>  at file /app/crm-app/.next/server/app/finances/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected /app/crm-app/.next/server/vendor-chunks/motion-utils.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/finances/page.js
+<w>  at file /app/crm-app/.next/server/app/finances/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected /app/crm-app/.next/server/vendor-chunks/framer-motion.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/finances/page.js
+<w>  at file /app/crm-app/.next/server/app/finances/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+ GET / 200 in 207ms
+ GET /_next/static/css/app/layout.css?v=1788926917842 404 in 53ms
+ GET /_next/static/chunks/main-app.js?v=1788926917842 404 in 110ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 101ms
+ GET /_next/static/chunks/app/page.js 404 in 98ms
+ GET /_next/static/chunks/app/layout.js 404 in 97ms
+ GET /students 200 in 39ms
+ GET /_next/static/css/app/layout.css?v=1788926921336 404 in 86ms
+ GET /_next/static/chunks/main-app.js?v=1788926921336 404 in 95ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 95ms
+ GET /_next/static/chunks/app/layout.js 404 in 93ms
+ GET /_next/static/chunks/app/students/page.js 404 in 95ms
+ GET / 200 in 47ms
+ GET /_next/static/css/app/layout.css?v=1788926987919 404 in 80ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 93ms
+ GET /_next/static/chunks/main-app.js?v=1788926987919 404 in 96ms
+ GET /_next/static/chunks/app/page.js 404 in 94ms
+ GET /_next/static/chunks/app/layout.js 404 in 90ms
+ GET /students 200 in 51ms
+ GET /_next/static/css/app/layout.css?v=1788926991255 404 in 46ms
+ GET /_next/static/chunks/main-app.js?v=1788926991255 404 in 93ms
+ GET /_next/static/chunks/app/students/page.js 404 in 88ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 92ms
+ GET /_next/static/chunks/app/layout.js 404 in 83ms
+ ○ Compiling /finances ...
+ ✓ Compiled /finances in 624ms (1587 modules)
+ GET /finances 200 in 761ms
+ GET /_next/static/css/app/layout.css?v=1788926994163 404 in 77ms
+ GET /_next/static/chunks/app/layout.js 404 in 106ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 108ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 106ms
+ GET /_next/static/chunks/main-app.js?v=1788926994163 404 in 111ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/app/crm-app/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /app/crm-app/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /app/crm-app/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/use-sync-external-store' in /app/crm-app/.next/server for build dependencies doesn't lead to expected result '/app/crm-app/.next/server/vendor-chunks/use-sync-external-store.js', but to 'Error: Can't resolve './vendor-chunks/use-sync-external-store' in '/app/crm-app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/use-sync-external-store (expected /app/crm-app/.next/server/vendor-chunks/use-sync-external-store.js)
+<w>  at file dependencies /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file /app/crm-app/.next/server/webpack-runtime.js
+<w>  at file dependencies /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file /app/crm-app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file /app/crm-app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /app/crm-app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+ GET / 200 in 79ms
+ GET /_next/static/css/app/layout.css?v=1788927057845 404 in 49ms
+ GET /_next/static/chunks/main-app.js?v=1788927057845 404 in 100ms
+ GET /_next/static/chunks/app/page.js 404 in 92ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 93ms
+ GET /_next/static/chunks/app/layout.js 404 in 92ms
+ GET /students 200 in 99ms
+ GET /_next/static/css/app/layout.css?v=1788927061212 404 in 80ms
+ GET /_next/static/chunks/main-app.js?v=1788927061212 404 in 98ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 98ms
+ GET /_next/static/chunks/app/students/page.js 404 in 97ms
+ GET /_next/static/chunks/app/layout.js 404 in 80ms
+ GET /finances 200 in 39ms
+ GET /_next/static/css/app/layout.css?v=1788927063486 404 in 44ms
+ GET /_next/static/chunks/main-app.js?v=1788927063486 404 in 92ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 91ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 89ms
+ GET /_next/static/chunks/app/layout.js 404 in 88ms
+ GET /students 200 in 31ms
+ GET / 200 in 49ms
+ GET /_next/static/css/app/layout.css?v=1788927161207 404 in 77ms
+ GET /_next/static/chunks/main-app.js?v=1788927161207 404 in 100ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 98ms
+ GET /_next/static/chunks/app/page.js 404 in 98ms
+ GET /_next/static/chunks/app/layout.js 404 in 97ms
+ GET /students 200 in 71ms
+ GET /_next/static/css/app/layout.css?v=1788927164538 404 in 79ms
+ GET /_next/static/chunks/main-app.js?v=1788927164538 404 in 96ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 93ms
+ GET /_next/static/chunks/app/students/page.js 404 in 93ms
+ GET /_next/static/chunks/app/layout.js 404 in 51ms
+ GET /finances 200 in 34ms
+ GET /_next/static/css/app/layout.css?v=1788927166765 404 in 40ms
+ GET /_next/static/chunks/main-app.js?v=1788927166765 404 in 81ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 80ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 78ms
+ GET /_next/static/chunks/app/layout.js 404 in 78ms
+ GET / 200 in 34ms
+ GET /_next/static/css/app/layout.css?v=1788927241026 404 in 91ms
+ GET /_next/static/chunks/main-app.js?v=1788927241026 404 in 109ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 108ms
+ GET /_next/static/chunks/app/layout.js 404 in 107ms
+ GET /_next/static/chunks/app/page.js 404 in 107ms
+ GET /students 200 in 73ms
+ GET /_next/static/css/app/layout.css?v=1788927244397 404 in 76ms
+ GET /_next/static/chunks/main-app.js?v=1788927244397 404 in 85ms
+ GET /_next/static/chunks/app/students/page.js 404 in 84ms
+ GET /_next/static/chunks/app/layout.js 404 in 80ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 86ms
+ GET / 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1788927303760 404 in 60ms
+ GET /_next/static/chunks/main-app.js?v=1788927303760 404 in 107ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 97ms
+ GET /_next/static/chunks/app/layout.js 404 in 97ms
+ GET /_next/static/chunks/app/page.js 404 in 96ms
+ GET /students 200 in 41ms
+ GET /_next/static/css/app/layout.css?v=1788927307114 404 in 72ms
+ GET /_next/static/chunks/main-app.js?v=1788927307114 404 in 90ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 89ms
+ GET /_next/static/chunks/app/students/page.js 404 in 89ms
+ GET /_next/static/chunks/app/layout.js 404 in 87ms
+ GET / 200 in 36ms
+ GET /_next/static/css/app/layout.css?v=1788927380318 404 in 61ms
+ GET /_next/static/chunks/main-app.js?v=1788927380318 404 in 106ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 97ms
+ GET /_next/static/chunks/app/page.js 404 in 92ms
+ GET /_next/static/chunks/app/layout.js 404 in 91ms
+ GET /students 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1788927383662 404 in 79ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/students/page.js 404 in 90ms
+ GET /_next/static/chunks/main-app.js?v=1788927383662 404 in 92ms
+ GET /_next/static/chunks/app/layout.js 404 in 90ms
+ GET / 200 in 32ms
+ GET /_next/static/css/app/layout.css?v=1788927442934 404 in 52ms
+ GET /_next/static/chunks/main-app.js?v=1788927442934 404 in 93ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/page.js 404 in 89ms
+ GET /_next/static/chunks/app/layout.js 404 in 86ms
+ GET /students 200 in 56ms
+ GET /_next/static/css/app/layout.css?v=1788927446297 404 in 61ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 110ms
+ GET /_next/static/chunks/main-app.js?v=1788927446297 404 in 114ms
+ GET /_next/static/chunks/app/students/page.js 404 in 111ms
+ GET /_next/static/chunks/app/layout.js 404 in 108ms
+ GET /students 200 in 31ms
+ GET / 200 in 73ms
+ GET /_next/static/css/app/layout.css?v=1788927521052 404 in 96ms
+ GET /_next/static/chunks/main-app.js?v=1788927521052 404 in 122ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 117ms
+ GET /_next/static/chunks/app/page.js 404 in 109ms
+ GET /_next/static/chunks/app/layout.js 404 in 103ms
+ GET /students 200 in 62ms
+ GET /_next/static/css/app/layout.css?v=1788927524464 404 in 43ms
+ GET /_next/static/chunks/main-app.js?v=1788927524464 404 in 92ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 88ms
+ GET /_next/static/chunks/app/students/page.js 404 in 83ms
+ GET /_next/static/chunks/app/layout.js 404 in 72ms
+ GET / 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1788927583183 404 in 75ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 89ms
+ GET /_next/static/chunks/app/page.js 404 in 89ms
+ GET /_next/static/chunks/app/layout.js 404 in 88ms
+ GET /_next/static/chunks/main-app.js?v=1788927583183 404 in 94ms
+ GET /students 200 in 66ms
+ GET /_next/static/css/app/layout.css?v=1788927586507 404 in 51ms
+ GET /_next/static/chunks/main-app.js?v=1788927586507 404 in 127ms
+ GET /_next/static/chunks/app/students/page.js 404 in 125ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 127ms
+ GET /_next/static/chunks/app/layout.js 404 in 122ms
+ GET / 200 in 33ms
+ GET /_next/static/css/app/layout.css?v=1788927662886 404 in 75ms
+ GET /_next/static/chunks/main-app.js?v=1788927662886 404 in 105ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 102ms
+ GET /_next/static/chunks/app/layout.js 404 in 100ms
+ GET /_next/static/chunks/app/page.js 404 in 102ms
+ GET /students 200 in 53ms
+ GET /_next/static/css/app/layout.css?v=1788927666250 404 in 70ms
+ GET /_next/static/chunks/app/students/page.js 404 in 88ms
+ GET /_next/static/chunks/main-app.js?v=1788927666250 404 in 91ms
+ GET /_next/static/chunks/app/layout.js 404 in 88ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 92ms
+ GET / 200 in 38ms
+ GET /_next/static/css/app/layout.css?v=1788927708656 404 in 48ms
+ GET /_next/static/chunks/main-app.js?v=1788927708656 404 in 91ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/page.js 404 in 87ms
+ GET /_next/static/chunks/app/layout.js 404 in 89ms
+ GET /students 200 in 36ms
+ GET /_next/static/css/app/layout.css?v=1788927711981 404 in 41ms
+ GET /_next/static/chunks/main-app.js?v=1788927711981 404 in 77ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 76ms
+ GET /_next/static/chunks/app/students/page.js 404 in 75ms
+ GET /_next/static/chunks/app/layout.js 404 in 66ms
+ GET / 200 in 30ms
+ GET /_next/static/css/app/layout.css?v=1788927740864 404 in 60ms
+ GET /_next/static/chunks/main-app.js?v=1788927740864 404 in 104ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 100ms
+ GET /_next/static/chunks/app/layout.js 404 in 95ms
+ GET /_next/static/chunks/app/page.js 404 in 96ms
+ GET /students 200 in 68ms
+ GET /_next/static/css/app/layout.css?v=1788927744197 404 in 68ms
+ GET /_next/static/chunks/main-app.js?v=1788927744197 404 in 91ms
+ GET /_next/static/chunks/app/students/page.js 404 in 88ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 92ms
+ GET /_next/static/chunks/app/layout.js 404 in 85ms
+ GET /finances 200 in 37ms
+ GET /_next/static/css/app/layout.css?v=1788927746411 404 in 35ms
+ GET /_next/static/chunks/main-app.js?v=1788927746411 404 in 66ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 63ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 62ms
+ GET /_next/static/chunks/app/layout.js 404 in 61ms
+ GET / 200 in 43ms
+ GET /_next/static/css/app/layout.css?v=1788927809383 404 in 55ms
+ GET /_next/static/chunks/main-app.js?v=1788927809383 404 in 88ms
+ GET /_next/static/chunks/app/layout.js 404 in 84ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 87ms
+ GET /_next/static/chunks/app/page.js 404 in 86ms
+ GET /students 200 in 40ms
+ GET /_next/static/css/app/layout.css?v=1788927812703 404 in 55ms
+ GET /_next/static/chunks/main-app.js?v=1788927812703 404 in 90ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/students/page.js 404 in 88ms
+ GET /_next/static/chunks/app/layout.js 404 in 88ms
+ GET /finances 200 in 38ms
+ GET /_next/static/css/app/layout.css?v=1788927814954 404 in 68ms
+ GET /_next/static/chunks/main-app.js?v=1788927814954 404 in 78ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 78ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 77ms
+ GET /_next/static/chunks/app/layout.js 404 in 77ms
+ GET /students 200 in 31ms
+ GET / 200 in 37ms
+ GET /_next/static/css/app/layout.css?v=1788927893571 404 in 65ms
+ GET /_next/static/chunks/main-app.js?v=1788927893571 404 in 85ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 86ms
+ GET /_next/static/chunks/app/layout.js 404 in 83ms
+ GET /_next/static/chunks/app/page.js 404 in 85ms
+ GET /students 200 in 44ms
+ GET /_next/static/css/app/layout.css?v=1788927896910 404 in 44ms
+ GET /_next/static/chunks/main-app.js?v=1788927896910 404 in 70ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 69ms
+ GET /_next/static/chunks/app/students/page.js 404 in 65ms
+ GET /_next/static/chunks/app/layout.js 404 in 63ms
+ GET /finances 200 in 34ms
+ GET /_next/static/css/app/layout.css?v=1788927899123 404 in 67ms
+ GET /_next/static/chunks/main-app.js?v=1788927899123 404 in 72ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 72ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 72ms
+ GET /_next/static/chunks/app/layout.js 404 in 74ms
+ GET /students 200 in 26ms
+ GET / 200 in 35ms
+ GET /_next/static/css/app/layout.css?v=1788927989191 404 in 49ms
+ GET /_next/static/chunks/main-app.js?v=1788927989191 404 in 83ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 82ms
+ GET /_next/static/chunks/app/page.js 404 in 81ms
+ GET /_next/static/chunks/app/layout.js 404 in 78ms
+ GET /students 200 in 51ms
+ GET /_next/static/css/app/layout.css?v=1788927992495 404 in 73ms
+ GET /_next/static/chunks/main-app.js?v=1788927992495 404 in 74ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 74ms
+ GET /_next/static/chunks/app/students/page.js 404 in 74ms
+ GET /_next/static/chunks/app/layout.js 404 in 74ms
+ GET /finances 200 in 35ms
+ GET /_next/static/css/app/layout.css?v=1788927994690 404 in 75ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 76ms
+ GET /_next/static/chunks/app/layout.js 404 in 74ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 74ms
+ GET /_next/static/chunks/main-app.js?v=1788927994690 404 in 77ms
+ GET /students 200 in 33ms
+ GET / 200 in 39ms
+ GET /_next/static/css/app/layout.css?v=1788928086556 404 in 64ms
+ GET /_next/static/chunks/main-app.js?v=1788928086556 404 in 92ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/page.js 404 in 88ms
+ GET /_next/static/chunks/app/layout.js 404 in 87ms
+ GET /students 200 in 47ms
+ GET /_next/static/css/app/layout.css?v=1788928089876 404 in 32ms
+ GET /_next/static/chunks/main-app.js?v=1788928089876 404 in 69ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 68ms
+ GET /_next/static/chunks/app/students/page.js 404 in 67ms
+ GET /_next/static/chunks/app/layout.js 404 in 65ms
+ GET /finances 200 in 113ms
+ GET /_next/static/css/app/layout.css?v=1788928092083 404 in 107ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 152ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 148ms
+ GET /_next/static/chunks/main-app.js?v=1788928092083 404 in 165ms
+ GET /_next/static/chunks/app/layout.js 404 in 134ms
+ GET / 200 in 37ms
+ GET /_next/static/css/app/layout.css?v=1788928122852 404 in 71ms
+ GET /_next/static/chunks/main-app.js?v=1788928122852 404 in 102ms
+ GET /_next/static/chunks/app/page.js 404 in 100ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 102ms
+ GET /_next/static/chunks/app/layout.js 404 in 99ms
+ GET /students 200 in 46ms
+ GET /_next/static/css/app/layout.css?v=1788928126192 404 in 71ms
+ GET /_next/static/chunks/main-app.js?v=1788928126192 404 in 82ms
+ GET /_next/static/chunks/app/students/page.js 404 in 79ms
+ GET /_next/static/chunks/app/layout.js 404 in 77ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 82ms
+ GET /finances 200 in 40ms
+ GET /_next/static/css/app/layout.css?v=1788928128395 404 in 72ms
+ GET /_next/static/chunks/main-app.js?v=1788928128395 404 in 76ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 76ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 75ms
+ GET /_next/static/chunks/app/layout.js 404 in 74ms
+ GET /students 200 in 33ms
+ GET / 200 in 36ms
+ GET /_next/static/css/app/layout.css?v=1788928178955 404 in 65ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 83ms
+ GET /_next/static/chunks/app/page.js 404 in 81ms
+ GET /_next/static/chunks/app/layout.js 404 in 81ms
+ GET /_next/static/chunks/main-app.js?v=1788928178955 404 in 80ms
+ GET /students 200 in 41ms
+ GET /_next/static/css/app/layout.css?v=1788928182276 404 in 58ms
+ GET /_next/static/chunks/main-app.js?v=1788928182276 404 in 78ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 76ms
+ GET /_next/static/chunks/app/layout.js 404 in 75ms
+ GET /_next/static/chunks/app/students/page.js 404 in 76ms
+ GET /finances 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1788928184483 404 in 67ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 70ms
+ GET /_next/static/chunks/app/layout.js 404 in 69ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 71ms
+ GET /_next/static/chunks/main-app.js?v=1788928184483 404 in 73ms
+ GET / 200 in 26ms
+ GET /_next/static/css/app/layout.css?v=1788928233844 404 in 47ms
+ GET /_next/static/chunks/main-app.js?v=1788928233844 404 in 88ms
+ GET /_next/static/chunks/app/page.js 404 in 85ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 86ms
+ GET /_next/static/chunks/app/layout.js 404 in 82ms
+ GET /students 200 in 36ms
+ GET /_next/static/css/app/layout.css?v=1788928237180 404 in 52ms
+ GET /_next/static/chunks/main-app.js?v=1788928237180 404 in 80ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 79ms
+ GET /_next/static/chunks/app/students/page.js 404 in 79ms
+ GET /_next/static/chunks/app/layout.js 404 in 76ms
+ GET /finances 200 in 38ms
+ GET /_next/static/css/app/layout.css?v=1788928239385 404 in 68ms
+ GET /_next/static/chunks/main-app.js?v=1788928239385 404 in 72ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 70ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 69ms
+ GET /_next/static/chunks/app/layout.js 404 in 69ms
+ GET / 200 in 42ms
+ GET /_next/static/css/app/layout.css?v=1788928321779 404 in 49ms
+ GET /_next/static/chunks/main-app.js?v=1788928321779 404 in 98ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 96ms
+ GET /_next/static/chunks/app/page.js 404 in 87ms
+ GET /_next/static/chunks/app/layout.js 404 in 87ms
+ GET /students 200 in 75ms
+ GET /_next/static/css/app/layout.css?v=1788928325118 404 in 53ms
+ GET /_next/static/chunks/main-app.js?v=1788928325118 404 in 81ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 81ms
+ GET /_next/static/chunks/app/students/page.js 404 in 80ms
+ GET /_next/static/chunks/app/layout.js 404 in 69ms
+ GET /finances 200 in 36ms
+ GET /_next/static/css/app/layout.css?v=1788928327321 404 in 70ms
+ GET /_next/static/chunks/main-app.js?v=1788928327321 404 in 77ms
+ GET /_next/static/chunks/app/layout.js 404 in 74ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 78ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 77ms
+ GET / 200 in 31ms
+ GET /_next/static/css/app/layout.css?v=1788928408064 404 in 44ms
+ GET /_next/static/chunks/main-app.js?v=1788928408064 404 in 90ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 90ms
+ GET /_next/static/chunks/app/page.js 404 in 89ms
+ GET /_next/static/chunks/app/layout.js 404 in 87ms
+ GET /students 200 in 47ms
+ GET /_next/static/css/app/layout.css?v=1788928411390 404 in 53ms
+ GET /_next/static/chunks/main-app.js?v=1788928411390 404 in 86ms
+ GET /_next/static/chunks/app/students/page.js 404 in 83ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 86ms
+ GET /_next/static/chunks/app/layout.js 404 in 84ms
+ GET /finances 200 in 35ms
+ GET /_next/static/css/app/layout.css?v=1788928413619 404 in 37ms
+ GET /_next/static/chunks/app/finances/page.js 404 in 60ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 65ms
+ GET /_next/static/chunks/main-app.js?v=1788928413619 404 in 68ms
+ GET /_next/static/chunks/app/layout.js 404 in 61ms
