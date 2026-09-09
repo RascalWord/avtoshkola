@@ -26,19 +26,19 @@ export function StudentForm({ open, onOpenChange }: StudentFormProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px] glass-panel border-white/10 text-white max-h-[90vh] flex flex-col">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Add New Student</DialogTitle>
+          <DialogTitle className="text-2xl">Добавить ученика</DialogTitle>
         </DialogHeader>
 
         <ScrollArea className="flex-1 pr-4 -mr-4">
           <div className="space-y-6 py-4">
             <div className="space-y-4">
-              <h4 className="font-medium text-primary">General Information</h4>
+              <h4 className="font-medium text-primary">Основная информация</h4>
               <div className="grid gap-2">
-                <Label htmlFor="full_name">Full Name</Label>
-                <Input id="full_name" placeholder="Ivan Ivanov" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
+                <Label htmlFor="full_name">ФИО</Label>
+                <Input id="full_name" placeholder="Иванов Иван Иванович" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="birth_date">Birth Date (YYYY-MM-DD)</Label>
+                <Label htmlFor="birth_date">Дата рождения (ГГГГ-ММ-ДД)</Label>
                 <Input
                   id="birth_date"
                   placeholder="2000-01-01"
@@ -58,19 +58,19 @@ export function StudentForm({ open, onOpenChange }: StudentFormProps) {
                   className="overflow-hidden"
                 >
                   <div className="p-4 rounded-lg bg-white/5 border border-primary/30 space-y-4">
-                    <h4 className="font-semibold text-primary">Legal Guardian (Required for &lt;18)</h4>
+                    <h4 className="font-semibold text-primary">Законный представитель (обязательно для &lt;18)</h4>
                     <div className="grid gap-2">
-                      <Label htmlFor="guardian_name">Guardian Full Name</Label>
-                      <Input id="guardian_name" placeholder="Petr Ivanov" className="bg-background/50 border-white/10" />
+                      <Label htmlFor="guardian_name">ФИО представителя</Label>
+                      <Input id="guardian_name" placeholder="Иванов Петр Сергеевич" className="bg-background/50 border-white/10" />
                     </div>
                     <div className="grid gap-2">
-                      <Label htmlFor="guardian_phone">Guardian Phone</Label>
+                      <Label htmlFor="guardian_phone">Телефон представителя</Label>
                       <Input id="guardian_phone" placeholder="+7 999 000 00 00" className="bg-background/50 border-white/10" />
                     </div>
                     <div className="flex items-center space-x-2 pt-2">
                       <Checkbox id="consent" className="border-white/20 data-[state=checked]:bg-primary" />
                       <Label htmlFor="consent" className="text-sm font-normal cursor-pointer">
-                        Written consent obtained
+                        Письменное согласие получено
                       </Label>
                     </div>
                   </div>
@@ -79,13 +79,13 @@ export function StudentForm({ open, onOpenChange }: StudentFormProps) {
             </AnimatePresence>
 
             <div className="space-y-4">
-              <h4 className="font-medium text-primary">Contact & Documents</h4>
+              <h4 className="font-medium text-primary">Контакты и документы</h4>
               <div className="grid gap-2">
-                <Label htmlFor="phone">Phone</Label>
+                <Label htmlFor="phone">Телефон</Label>
                 <Input id="phone" placeholder="+7 900 000 00 00" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="passport">Passport Series & Number</Label>
+                <Label htmlFor="passport">Серия и номер паспорта</Label>
                 <Input id="passport" placeholder="1234 567890" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
               </div>
             </div>
@@ -93,8 +93,8 @@ export function StudentForm({ open, onOpenChange }: StudentFormProps) {
         </ScrollArea>
 
         <div className="flex justify-end gap-3 pt-4 border-t border-white/10 mt-4">
-          <Button variant="ghost" onClick={() => onOpenChange(false)}>Cancel</Button>
-          <Button onClick={() => onOpenChange(false)}>Save Student</Button>
+          <Button variant="ghost" onClick={() => onOpenChange(false)}>Отмена</Button>
+          <Button onClick={() => onOpenChange(false)}>Сохранить ученика</Button>
         </div>
       </DialogContent>
     </Dialog>

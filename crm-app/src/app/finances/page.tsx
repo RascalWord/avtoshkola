@@ -21,25 +21,25 @@ export default function FinancesPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight text-white">Finances</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-white">Финансы</h2>
 
         <Dialog>
           <DialogTrigger asChild>
             <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white shadow-lg shadow-green-900/20">
               <Plus className="h-4 w-4" />
-              Accept Payment
+              Внести оплату
             </Button>
           </DialogTrigger>
           <DialogContent className="glass-panel border-white/10 text-white sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle>Record Payment</DialogTitle>
+              <DialogTitle>Оформление платежа</DialogTitle>
             </DialogHeader>
             <div className="space-y-4 pt-4">
               <div className="grid gap-2">
-                <Label>Student</Label>
+                <Label>Ученик</Label>
                 <Select value={selectedStudent} onValueChange={(v) => setSelectedStudent(v || "")}>
                   <SelectTrigger className="bg-background/50 border-white/10">
-                    <SelectValue placeholder="Select student..." />
+                    <SelectValue placeholder="Выберите ученика..." />
                   </SelectTrigger>
                   <SelectContent>
                     {mockStudents.map(student => (
@@ -53,7 +53,7 @@ export default function FinancesPage() {
 
               {selectedStudent && (
                 <div className="p-3 bg-white/5 border border-white/10 rounded-md flex justify-between items-center text-sm">
-                  <span className="text-muted-foreground">Current Debt:</span>
+                  <span className="text-muted-foreground">Остаток долга:</span>
                   <span className={`font-bold ${studentDebt > 0 ? "text-destructive" : "text-green-400"}`}>
                     {studentDebt.toLocaleString()} ₽
                   </span>
@@ -61,26 +61,26 @@ export default function FinancesPage() {
               )}
 
               <div className="grid gap-2">
-                <Label>Amount (₽)</Label>
+                <Label>Сумма (₽)</Label>
                 <Input type="number" placeholder="0.00" className="bg-background/50 border-white/10" />
               </div>
 
               <div className="grid gap-2">
-                <Label>Payment Method</Label>
+                <Label>Способ оплаты</Label>
                 <Select defaultValue="Card">
                   <SelectTrigger className="bg-background/50 border-white/10">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Cash">Cash</SelectItem>
-                    <SelectItem value="Card">Card</SelectItem>
-                    <SelectItem value="Bank Transfer">Bank Transfer</SelectItem>
+                    <SelectItem value="Cash">Наличные</SelectItem>
+                    <SelectItem value="Card">Карта</SelectItem>
+                    <SelectItem value="Bank Transfer">Банковский перевод</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div className="grid gap-2">
-                <Label>Received By (Admin)</Label>
+                <Label>Кто принял оплату (Админ)</Label>
                 <Select defaultValue={mockAdmins[0].id}>
                   <SelectTrigger className="bg-background/50 border-white/10">
                     <SelectValue />
@@ -88,14 +88,14 @@ export default function FinancesPage() {
                   <SelectContent>
                     {mockAdmins.map(admin => (
                       <SelectItem key={admin.id} value={admin.id}>
-                        {admin.name} ({admin.role})
+                        {admin.name} ({admin.role === "Director" ? "Директор" : "Со-Директор"})
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
 
-              <Button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white">Confirm Payment</Button>
+              <Button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white">Подтвердить оплату</Button>
             </div>
           </DialogContent>
         </Dialog>
@@ -105,11 +105,11 @@ export default function FinancesPage() {
         <Table>
           <TableHeader className="bg-background/50">
             <TableRow className="border-white/5 hover:bg-transparent">
-              <TableHead className="text-muted-foreground">Date</TableHead>
-              <TableHead className="text-muted-foreground">Student</TableHead>
-              <TableHead className="text-muted-foreground">Amount</TableHead>
-              <TableHead className="text-muted-foreground">Method</TableHead>
-              <TableHead className="text-muted-foreground">Processed By</TableHead>
+              <TableHead className="text-muted-foreground">Дата</TableHead>
+              <TableHead className="text-muted-foreground">Ученик</TableHead>
+              <TableHead className="text-muted-foreground">Сумма</TableHead>
+              <TableHead className="text-muted-foreground">Способ</TableHead>
+              <TableHead className="text-muted-foreground">Принял(а)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -119,12 +119,12 @@ export default function FinancesPage() {
 
               return (
                 <TableRow key={payment.id} className="border-white/5 hover:bg-white/5">
-                  <TableCell className="text-muted-foreground">{payment.date}</TableCell>
+                  <TableCell className="text-muted-foreground">{new Date(payment.date).toLocaleDateString('ru-RU')}</TableCell>
                   <TableCell className="font-medium text-white">{student?.full_name}</TableCell>
                   <TableCell className="font-bold text-green-400">+{payment.amount.toLocaleString()} ₽</TableCell>
                   <TableCell>
                     <Badge variant="outline" className="border-white/10 text-muted-foreground">
-                      {payment.method}
+                      {payment.method === 'Cash' ? 'Наличные' : payment.method === 'Card' ? 'Карта' : 'Перевод'}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-muted-foreground text-sm">{admin?.name}</TableCell>

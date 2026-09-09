@@ -33,31 +33,31 @@ export function StudentDialog({ studentId, open, onOpenChange }: StudentDialogPr
         <DialogHeader>
           <DialogTitle className="text-2xl">{student.full_name}</DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Student details and history
+            Детали ученика и история
           </DialogDescription>
         </DialogHeader>
 
         <Tabs defaultValue="info" className="w-full mt-4">
           <TabsList className="w-full grid grid-cols-3 bg-background/50 border border-white/5">
-            <TabsTrigger value="info" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Info</TabsTrigger>
-            <TabsTrigger value="docs" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Documents</TabsTrigger>
-            <TabsTrigger value="finance" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Finances</TabsTrigger>
+            <TabsTrigger value="info" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Инфо</TabsTrigger>
+            <TabsTrigger value="docs" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Документы</TabsTrigger>
+            <TabsTrigger value="finance" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">Финансы</TabsTrigger>
           </TabsList>
 
           <TabsContent value="info" className="space-y-4 mt-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-muted-foreground">Category</p>
+                <p className="text-sm text-muted-foreground">Категория</p>
                 <p className="font-medium text-lg">{student.category}</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Status</p>
+                <p className="text-sm text-muted-foreground">Статус</p>
                 <Badge className="mt-1" variant={student.status === "Active" ? "default" : "secondary"}>
-                  {student.status}
+                  {student.status === "Active" ? "Активен" : student.status === "Completed" ? "Завершил" : "Отчислен"}
                 </Badge>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Phone</p>
+                <p className="text-sm text-muted-foreground">Телефон</p>
                 <p>{student.phone}</p>
               </div>
               <div>
@@ -65,22 +65,22 @@ export function StudentDialog({ studentId, open, onOpenChange }: StudentDialogPr
                 <p>{student.email}</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Birth Date</p>
-                <p>{student.birth_date} ({age} years old)</p>
+                <p className="text-sm text-muted-foreground">Дата рождения</p>
+                <p>{student.birth_date} (лет: {age})</p>
               </div>
             </div>
 
             {isUnderage && guardian && (
               <div className="mt-6 p-4 rounded-lg bg-white/5 border border-white/10">
-                <h4 className="font-semibold text-primary mb-2">Legal Guardian Details</h4>
+                <h4 className="font-semibold text-primary mb-2">Законный представитель</h4>
                 <div className="grid grid-cols-2 gap-2 text-sm">
-                  <p className="text-muted-foreground">Name:</p>
+                  <p className="text-muted-foreground">ФИО:</p>
                   <p>{guardian.full_name}</p>
-                  <p className="text-muted-foreground">Phone:</p>
+                  <p className="text-muted-foreground">Телефон:</p>
                   <p>{guardian.phone}</p>
-                  <p className="text-muted-foreground">Consent:</p>
+                  <p className="text-muted-foreground">Согласие:</p>
                   <p className={guardian.is_consent_signed ? "text-green-400" : "text-destructive"}>
-                    {guardian.is_consent_signed ? "Signed" : "Pending"}
+                    {guardian.is_consent_signed ? "Получено" : "Не получено"}
                   </p>
                 </div>
               </div>
@@ -90,20 +90,20 @@ export function StudentDialog({ studentId, open, onOpenChange }: StudentDialogPr
           <TabsContent value="docs" className="space-y-4 mt-4">
             <div className="space-y-4">
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-                <h4 className="font-medium mb-2">Passport</h4>
-                <p className="text-sm"><span className="text-muted-foreground">Series & Number:</span> {student.passport_series} {student.passport_number}</p>
-                <p className="text-sm"><span className="text-muted-foreground">Issued By:</span> {student.passport_issued_by}</p>
-                <p className="text-sm"><span className="text-muted-foreground">Issue Date:</span> {student.passport_issue_date}</p>
-                <p className="text-sm"><span className="text-muted-foreground">Code:</span> {student.passport_code}</p>
+                <h4 className="font-medium mb-2">Паспорт</h4>
+                <p className="text-sm"><span className="text-muted-foreground">Серия и Номер:</span> {student.passport_series} {student.passport_number}</p>
+                <p className="text-sm"><span className="text-muted-foreground">Выдан:</span> {student.passport_issued_by}</p>
+                <p className="text-sm"><span className="text-muted-foreground">Дата выдачи:</span> {student.passport_issue_date}</p>
+                <p className="text-sm"><span className="text-muted-foreground">Код подразделения:</span> {student.passport_code}</p>
               </div>
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-                <h4 className="font-medium mb-2">SNILS</h4>
+                <h4 className="font-medium mb-2">СНИЛС</h4>
                 <p className="text-sm">{student.snils}</p>
               </div>
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-                <h4 className="font-medium mb-2">Addresses</h4>
-                <p className="text-sm"><span className="text-muted-foreground">Registration:</span> {student.address_registration}</p>
-                <p className="text-sm"><span className="text-muted-foreground">Fact:</span> {student.address_fact}</p>
+                <h4 className="font-medium mb-2">Адреса</h4>
+                <p className="text-sm"><span className="text-muted-foreground">Регистрация:</span> {student.address_registration}</p>
+                <p className="text-sm"><span className="text-muted-foreground">Фактический:</span> {student.address_fact}</p>
               </div>
             </div>
           </TabsContent>
@@ -111,38 +111,38 @@ export function StudentDialog({ studentId, open, onOpenChange }: StudentDialogPr
           <TabsContent value="finance" className="space-y-4 mt-4">
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-                <p className="text-sm text-muted-foreground">Total Cost</p>
+                <p className="text-sm text-muted-foreground">Полная стоимость</p>
                 <p className="text-xl font-bold">{student.total_cost.toLocaleString()} ₽</p>
               </div>
               <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-                <p className="text-sm text-muted-foreground">Total Paid</p>
+                <p className="text-sm text-muted-foreground">Оплачено</p>
                 <p className="text-xl font-bold text-green-400">{totalPaid.toLocaleString()} ₽</p>
               </div>
               <div className="p-3 rounded-lg bg-white/5 border border-white/10">
-                <p className="text-sm text-muted-foreground">Remaining Debt</p>
+                <p className="text-sm text-muted-foreground">Остаток долга</p>
                 <p className={`text-xl font-bold ${debt > 0 ? "text-destructive" : ""}`}>{debt.toLocaleString()} ₽</p>
               </div>
             </div>
 
-            <h4 className="font-medium mb-2">Payment History</h4>
+            <h4 className="font-medium mb-2">История оплат</h4>
             <div className="rounded-md border border-white/5">
               <Table>
                 <TableHeader className="bg-background/50">
                   <TableRow className="border-white/5 hover:bg-transparent">
-                    <TableHead className="text-muted-foreground">Date</TableHead>
-                    <TableHead className="text-muted-foreground">Amount</TableHead>
-                    <TableHead className="text-muted-foreground">Method</TableHead>
+                    <TableHead className="text-muted-foreground">Дата</TableHead>
+                    <TableHead className="text-muted-foreground">Сумма</TableHead>
+                    <TableHead className="text-muted-foreground">Способ</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {studentPayments.length === 0 ? (
                     <TableRow className="border-white/5 hover:bg-transparent">
-                      <TableCell colSpan={3} className="text-center text-muted-foreground">No payments found.</TableCell>
+                      <TableCell colSpan={3} className="text-center text-muted-foreground">Оплат не найдено.</TableCell>
                     </TableRow>
                   ) : (
                     studentPayments.map((payment) => (
                       <TableRow key={payment.id} className="border-white/5 hover:bg-white/5">
-                        <TableCell>{payment.date}</TableCell>
+                        <TableCell>{new Date(payment.date).toLocaleDateString('ru-RU')}</TableCell>
                         <TableCell className="font-medium text-green-400">+{payment.amount.toLocaleString()} ₽</TableCell>
                         <TableCell>{payment.method}</TableCell>
                       </TableRow>

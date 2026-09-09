@@ -28,10 +28,10 @@ export default function StudentsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight text-white">Students</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-white">Ученики</h2>
         <Button className="gap-2 shadow-lg shadow-primary/20" onClick={() => setIsFormOpen(true)}>
           <Plus className="h-4 w-4" />
-          Add Student
+          Добавить ученика
         </Button>
       </div>
 
@@ -40,7 +40,7 @@ export default function StudentsPage() {
           <div className="relative w-full sm:w-72">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search by name..."
+              placeholder="Поиск по ФИО..."
               className="pl-9 bg-background/50 border-white/10 text-white placeholder:text-muted-foreground focus-visible:ring-primary"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -48,13 +48,13 @@ export default function StudentsPage() {
           </div>
           <Select value={statusFilter} onValueChange={(val) => setStatusFilter(val || "All")}>
             <SelectTrigger className="w-full sm:w-[180px] bg-background/50 border-white/10 text-white">
-              <SelectValue placeholder="Filter by status" />
+              <SelectValue placeholder="Фильтр по статусу" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="All">All Statuses</SelectItem>
-              <SelectItem value="Active">Active</SelectItem>
-              <SelectItem value="Completed">Completed</SelectItem>
-              <SelectItem value="Dropped">Dropped</SelectItem>
+              <SelectItem value="All">Все статусы</SelectItem>
+              <SelectItem value="Active">Активен</SelectItem>
+              <SelectItem value="Completed">Завершил</SelectItem>
+              <SelectItem value="Dropped">Отчислен</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -67,10 +67,10 @@ export default function StudentsPage() {
           <Table>
             <TableHeader className="bg-background/50">
               <TableRow className="border-white/5 hover:bg-transparent">
-                <TableHead className="text-muted-foreground">Name</TableHead>
-                <TableHead className="text-muted-foreground">Category</TableHead>
-                <TableHead className="text-muted-foreground">Phone</TableHead>
-                <TableHead className="text-muted-foreground">Status</TableHead>
+                <TableHead className="text-muted-foreground">ФИО</TableHead>
+                <TableHead className="text-muted-foreground">Категория</TableHead>
+                <TableHead className="text-muted-foreground">Телефон</TableHead>
+                <TableHead className="text-muted-foreground">Статус</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -92,7 +92,7 @@ export default function StudentsPage() {
                       variant={student.status === "Active" ? "default" : student.status === "Completed" ? "secondary" : "destructive"}
                       className={student.status === "Active" ? "bg-primary/20 text-primary hover:bg-primary/30" : ""}
                     >
-                      {student.status}
+                      {student.status === "Active" ? "Активен" : student.status === "Completed" ? "Завершил" : "Отчислен"}
                     </Badge>
                   </TableCell>
                 </TableRow>

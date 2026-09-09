@@ -16,7 +16,7 @@ export default function Dashboard() {
   const upcomingLessons = mockLessons.filter(l => new Date(l.date_time) >= new Date()).length;
 
   const paymentsData = mockPayments.reduce((acc: { name: string, total: number }[], payment) => {
-    const month = new Date(payment.date).toLocaleString('default', { month: 'short' });
+    const month = new Date(payment.date).toLocaleString('ru-RU', { month: 'short' });
     const existing = acc.find(item => item.name === month);
     if (existing) {
       existing.total += payment.amount;
@@ -25,41 +25,41 @@ export default function Dashboard() {
     }
     return acc;
   }, []).sort((a, b) => {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = ['янв.', 'февр.', 'мар.', 'апр.', 'мая', 'июн.', 'июл.', 'авг.', 'сент.', 'окт.', 'нояб.', 'дек.'];
     return months.indexOf(a.name) - months.indexOf(b.name);
   });
 
   const stats = [
     {
-      title: "Active Students",
+      title: "Активные ученики",
       value: activeStudents,
       icon: Users,
-      description: "+2 from last month",
+      description: "+2 с прошлого месяца",
     },
     {
-      title: "Total Debt",
+      title: "Сумма долгов",
       value: `${totalDebt.toLocaleString()} ₽`,
       icon: Wallet,
-      description: "Needs attention",
+      description: "Требует внимания",
     },
     {
-      title: "Total Paid",
+      title: "Всего получено",
       value: `${totalPaid.toLocaleString()} ₽`,
       icon: TrendingUp,
-      description: "Across all time",
+      description: "За всё время",
     },
     {
-      title: "Upcoming Lessons",
+      title: "Уроки на сегодня",
       value: upcomingLessons,
       icon: CalendarDays,
-      description: "Scheduled for next 7 days",
+      description: "Запланированы на ближайшие 7 дней",
     },
   ];
 
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight text-white">Dashboard</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-white">Главная (Дашборд)</h2>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -96,7 +96,7 @@ export default function Dashboard() {
       >
         <Card className="col-span-7 lg:col-span-4 glass-panel border-white/5">
           <CardHeader>
-            <CardTitle className="text-white">Revenue Overview</CardTitle>
+            <CardTitle className="text-white">График поступлений</CardTitle>
           </CardHeader>
           <CardContent className="pl-2">
             <div className="h-[350px]">

@@ -71,30 +71,30 @@ export type Payment = {
 };
 
 export const mockAdmins: Admin[] = [
-  { id: "a1", name: "Alexey Smirnov", role: "Director" },
-  { id: "a2", name: "Maria Ivanova", role: "Co-Director" },
+  { id: "a1", name: "Алексей Смирнов", role: "Director" },
+  { id: "a2", name: "Мария Иванова", role: "Co-Director" },
 ];
 
 export const mockGroups: Group[] = [
-  { id: "g1", name: "Group B - Evening", format: "offline" },
-  { id: "g2", name: "Group A - Weekend", format: "online", meeting_link: "https://zoom.us/j/123456789" },
-  { id: "g3", name: "Group C - Morning", format: "offline" },
+  { id: "g1", name: "Группа B - Вечерняя", format: "offline" },
+  { id: "g2", name: "Группа A - Выходного дня", format: "online", meeting_link: "https://zoom.us/j/123456789" },
+  { id: "g3", name: "Группа C - Утренняя", format: "offline" },
 ];
 
 export const mockStudents: Student[] = [
   {
     id: "s1",
-    full_name: "Ivan Petrov",
+    full_name: "Иван Петров",
     birth_date: "1995-04-12",
     phone: "+7 999 123 45 67",
     email: "ivan@example.com",
     passport_series: "1234",
     passport_number: "567890",
-    passport_issued_by: "GU MVD",
+    passport_issued_by: "ГУ МВД РФ по г. Москве",
     passport_issue_date: "2015-05-20",
     passport_code: "123-456",
-    address_registration: "Moscow, Lenina 1",
-    address_fact: "Moscow, Lenina 1",
+    address_registration: "г. Москва, ул. Ленина, д. 1",
+    address_fact: "г. Москва, ул. Ленина, д. 1",
     snils: "123-456-789 00",
     category: "B",
     group_id: "g1",
@@ -103,17 +103,17 @@ export const mockStudents: Student[] = [
   },
   {
     id: "s2",
-    full_name: "Anna Sidorova",
+    full_name: "Анна Сидорова",
     birth_date: "2007-08-25", // Under 18
     phone: "+7 999 987 65 43",
     email: "anna@example.com",
     passport_series: "4321",
     passport_number: "098765",
-    passport_issued_by: "GU MVD",
+    passport_issued_by: "ГУ МВД РФ по г. СПб",
     passport_issue_date: "2021-09-10",
     passport_code: "654-321",
-    address_registration: "St. Petersburg, Nevsky 10",
-    address_fact: "St. Petersburg, Nevsky 10",
+    address_registration: "г. Санкт-Петербург, Невский пр-т, д. 10",
+    address_fact: "г. Санкт-Петербург, Невский пр-т, д. 10",
     snils: "987-654-321 11",
     category: "A",
     group_id: "g2",
@@ -122,17 +122,17 @@ export const mockStudents: Student[] = [
   },
   {
     id: "s3",
-    full_name: "Sergey Makarov",
+    full_name: "Сергей Макаров",
     birth_date: "1988-11-05",
     phone: "+7 900 111 22 33",
     email: "sergey@example.com",
     passport_series: "5555",
     passport_number: "111222",
-    passport_issued_by: "OVD",
+    passport_issued_by: "ОВД Советского р-на",
     passport_issue_date: "2008-12-01",
     passport_code: "111-222",
-    address_registration: "Kazan, Mira 5",
-    address_fact: "Kazan, Mira 5",
+    address_registration: "г. Казань, ул. Мира, д. 5",
+    address_fact: "г. Казань, ул. Мира, д. 5",
     snils: "555-111-222 33",
     category: "C",
     group_id: "g3",
@@ -145,7 +145,7 @@ export const mockLegalGuardians: LegalGuardian[] = [
   {
     id: "lg1",
     student_id: "s2",
-    full_name: "Elena Sidorova",
+    full_name: "Елена Сидорова",
     passport_data: "4321 098765",
     phone: "+7 999 000 11 22",
     is_consent_signed: true,
@@ -153,9 +153,9 @@ export const mockLegalGuardians: LegalGuardian[] = [
 ];
 
 export const mockLessons: Lesson[] = [
-  { id: "l1", group_id: "g1", date_time: "2024-05-10T18:00:00", topic: "Traffic Rules Basics" },
-  { id: "l2", group_id: "g1", date_time: "2024-05-12T18:00:00", topic: "Road Signs" },
-  { id: "l3", group_id: "g2", date_time: "2024-05-11T10:00:00", topic: "Vehicle Setup" },
+  { id: "l1", group_id: "g1", date_time: "2024-05-10T18:00:00", topic: "Основы ПДД" },
+  { id: "l2", group_id: "g1", date_time: "2024-05-12T18:00:00", topic: "Дорожные знаки" },
+  { id: "l3", group_id: "g2", date_time: "2024-05-11T10:00:00", topic: "Устройство ТС" },
 ];
 
 export const mockAttendance: Attendance[] = [

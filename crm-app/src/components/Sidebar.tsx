@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { name: "Dashboard", href: "/", icon: LayoutDashboard },
-  { name: "Students", href: "/students", icon: Users },
-  { name: "Groups", href: "/groups", icon: UsersRound },
-  { name: "Finances", href: "/finances", icon: Wallet },
+  { name: "Главная", href: "/", icon: LayoutDashboard },
+  { name: "Ученики", href: "/students", icon: Users },
+  { name: "Группы", href: "/groups", icon: UsersRound },
+  { name: "Финансы", href: "/finances", icon: Wallet },
 ];
 
 export function Sidebar() {
@@ -51,8 +51,8 @@ export function Sidebar() {
             AS
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-medium text-white">Alexey Smirnov</span>
-            <span className="text-xs text-muted-foreground">Director</span>
+            <span className="text-sm font-medium text-white">Алексей Смирнов</span>
+            <span className="text-xs text-muted-foreground">Директор</span>
           </div>
         </div>
       </div>

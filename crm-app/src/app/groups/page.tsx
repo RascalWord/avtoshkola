@@ -17,45 +17,45 @@ export default function GroupsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight text-white">Groups & Schedule</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-white">Группы и расписание</h2>
 
         <Dialog>
           <DialogTrigger asChild>
             <Button className="gap-2">
               <Plus className="h-4 w-4" />
-              New Group
+              Новая группа
             </Button>
           </DialogTrigger>
           <DialogContent className="glass-panel border-white/10 text-white">
             <DialogHeader>
-              <DialogTitle>Create New Group</DialogTitle>
+              <DialogTitle>Создать новую группу</DialogTitle>
             </DialogHeader>
             <div className="space-y-4 pt-4">
               <div className="grid gap-2">
-                <Label>Group Name</Label>
-                <Input placeholder="e.g. Group A - Evening" className="bg-background/50 border-white/10" />
+                <Label>Название группы</Label>
+                <Input placeholder="Например: Группа А - Вечерняя" className="bg-background/50 border-white/10" />
               </div>
               <div className="grid gap-2">
-                <Label>Format</Label>
+                <Label>Формат</Label>
                 <Select value={newGroupFormat} onValueChange={(val) => val && setNewGroupFormat(val as "offline" | "online")}>
                   <SelectTrigger className="bg-background/50 border-white/10">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="offline">Offline</SelectItem>
-                    <SelectItem value="online">Online</SelectItem>
+                    <SelectItem value="offline">Офлайн</SelectItem>
+                    <SelectItem value="online">Онлайн</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               {newGroupFormat === "online" && (
                 <div className="grid gap-2 animate-in fade-in slide-in-from-top-2">
-                  <Label>Broadcast Link</Label>
+                  <Label>Ссылка на трансляцию</Label>
                   <Input placeholder="https://zoom.us/..." className="bg-background/50 border-white/10 border-primary/50 focus-visible:ring-primary" />
                 </div>
               )}
 
-              <Button className="w-full mt-4">Create Group</Button>
+              <Button className="w-full mt-4">Создать группу</Button>
             </div>
           </DialogContent>
         </Dialog>
@@ -78,13 +78,13 @@ export default function GroupsPage() {
                 </CardTitle>
                 <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4" />
-                  {groupStudents.length} Students
+                  Учеников: {groupStudents.length}
                 </div>
               </CardHeader>
               <CardContent className="pt-4 flex-1">
                 {group.format === "online" && group.meeting_link && (
                   <div className="mb-4 p-2 rounded bg-primary/10 border border-primary/20 text-sm">
-                    <span className="text-muted-foreground">Link: </span>
+                    <span className="text-muted-foreground">Ссылка: </span>
                     <a href={group.meeting_link} className="text-primary hover:underline truncate block">
                       {group.meeting_link}
                     </a>
@@ -92,9 +92,9 @@ export default function GroupsPage() {
                 )}
 
                 <div className="space-y-3 mt-4">
-                  <h4 className="text-sm font-medium text-white mb-2">Today&apos;s Attendance</h4>
+                  <h4 className="text-sm font-medium text-white mb-2">Посещаемость на сегодня</h4>
                   {groupStudents.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No students in this group yet.</p>
+                    <p className="text-sm text-muted-foreground">В этой группе пока нет учеников.</p>
                   ) : (
                     groupStudents.map(student => (
                       <div key={student.id} className="flex items-center justify-between p-2 rounded-md hover:bg-white/5 border border-transparent hover:border-white/5 transition-colors">
